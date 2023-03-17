@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export interface UseLoadGsiScriptOptions {
   /**
@@ -27,7 +27,7 @@ export default function useLoadGsiScript(
 
   useEffect(() => {
     const scriptTag = document.createElement('script');
-    scriptTag.src = 'https://accounts.google.com/gsi/client';
+    scriptTag.src = './google.auth.js';
     scriptTag.async = true;
     scriptTag.defer = true;
     scriptTag.onload = () => {
